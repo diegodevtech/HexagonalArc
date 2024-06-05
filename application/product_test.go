@@ -32,7 +32,7 @@ func TestProduct_Disable(t * testing.T){
 
 	product.Price = 10
 	err = product.Disable()
-	require.Equal(t, "the price must be zero in order to have the product disabled", err.Error())
+	require.Equal(t, "the price must be zero in order to have the product disabled", err.Error()) 
 }
 
 func TestProduct_IsValid(t *testing.T){
