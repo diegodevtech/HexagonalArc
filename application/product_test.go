@@ -42,7 +42,7 @@ func TestProduct_IsValid(t *testing.T){
 	product.Status = application.DISABLED
 	product.Price = 10
 
-	_, err := product.IsValid()
+	_, err := product.IsValid() 
 	require.Nil(t, err)
 	
 
