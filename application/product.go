@@ -77,6 +77,7 @@ func(p *Product) IsValid() (bool, error) {
 	} 
 	return true, nil
 }
+
 func (p *Product) Enable() error {
 	if p.Price > 0 {
 		p.Status = ENABLED
@@ -84,6 +85,7 @@ func (p *Product) Enable() error {
 	}
 	return errors.New("the price must be greater than zero to enable the product")
 }
+
 func (p *Product) Disable() error {
 	if p.Price == 0 {
 		p.Status = DISABLED
@@ -91,15 +93,19 @@ func (p *Product) Disable() error {
 	}
 	return errors.New("the price must be zero in order to have the product disabled")
 }
+
 func (p *Product) GetID() string {
 	return p.ID
 }
+
 func (p *Product) GetName() string {
 	return p.Name
 }
+
 func (p *Product) GetStatus() string{
 	return p.Status
 }
+
 func (p *Product) GetPrice() float64{
 	return p.Price
 }
